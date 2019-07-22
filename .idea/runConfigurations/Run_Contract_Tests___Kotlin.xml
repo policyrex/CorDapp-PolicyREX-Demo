@@ -1,0 +1,19 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Contract Tests - Kotlin" type="JUnit" factoryName="JUnit">
+    <module name="kotlin-source_test" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.policyrex.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.insuranceClaim.contract" />
+    <option name="MAIN_CLASS_NAME" value="com.insurance.ClaimContractTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="PARAMETERS" value="" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/kotlin-source" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
