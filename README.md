@@ -2,7 +2,7 @@
 
 #### Interacting with the webserver
 
-The static webpage is served on:
+The API Endpoint:
 
     http://localhost:10009/api/v1
 
