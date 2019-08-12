@@ -6,10 +6,6 @@ import net.corda.testing.driver.DriverParameters
 import net.corda.testing.driver.driver
 import net.corda.testing.node.User
 
-/**
- * This file is exclusively for being able to run your nodes through an IDE.
- * Do not use in a production environment.
- */
 fun main(args: Array<String>) {
     val user = User("user1", "test", permissions = setOf("ALL"))
     driver(DriverParameters(waitForAllNodesToFinish = true)) {

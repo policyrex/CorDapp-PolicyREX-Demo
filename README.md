@@ -1,2 +1,2 @@
-# The PolicyREX CorDapp
+# The PolicyREX CorDapp - This is training version
 
