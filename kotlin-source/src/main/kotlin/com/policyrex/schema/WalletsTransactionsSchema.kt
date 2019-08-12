@@ -37,6 +37,9 @@ object WalletsTransactionsSchemaObject : MappedSchema(
             @Column(name = "currency")
             var currency: String,
 
+            @Column(name = "type")
+            var type: String,
+
             @Column(name= "value")
             var value: Int,
 
@@ -45,6 +48,6 @@ object WalletsTransactionsSchemaObject : MappedSchema(
 
     ) : PersistentState() {
         // Default constructor required by hibernate.
-        constructor(): this("", "", "", "", "",0, UUID.randomUUID())
+        constructor(): this("", "", "", "", "","", 0,UUID.randomUUID())
     }
 }

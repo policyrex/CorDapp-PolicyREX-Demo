@@ -22,6 +22,7 @@ object WalletsTransactionsFlow {
             val sender_id: String,
             val receive_id: String,
             val currency: String,
+            val type: String,
             val value: Int
     ) : FlowLogic<SignedTransaction>()
     {
@@ -60,7 +61,7 @@ object WalletsTransactionsFlow {
             // Stage 1.
             progressTracker.currentStep = GENERATING_TRANSACTION
             // Generate an unsigned transaction.
-            val iouState = WalletsTransactionsState(serviceHub.myInfo.legalIdentities.first(), policyREXNode, sender_id, receive_id, currency, value)
+            val iouState = WalletsTransactionsState(serviceHub.myInfo.legalIdentities.first(), policyREXNode, sender_id, receive_id, currency, type ,value)
             val txCommand = Command(WalletsTransactionsContract.Commands.Create(), iouState.participants.map { it.owningKey })
             val txBuilder = TransactionBuilder(notary)
                     .addOutputState(iouState, TRANSACTION_CONTRACT_ID)

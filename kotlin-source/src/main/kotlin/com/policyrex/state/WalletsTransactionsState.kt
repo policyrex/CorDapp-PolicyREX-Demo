@@ -17,6 +17,7 @@ data class WalletsTransactionsState(
         val senderID: String,
         val receiveID: String,
         val currency: String,
+        val type: String,
         val value:Int,
         override val linearId: UniqueIdentifier = UniqueIdentifier()):
         LinearState, QueryableState {
@@ -31,6 +32,7 @@ data class WalletsTransactionsState(
                     this.senderID,
                     this.receiveID,
                     this.currency,
+                    this.type,
                     this.value,
                     this.linearId.id
             )
